@@ -4,7 +4,7 @@ export class InsertionSort {
    * @param {number[]} array ソート対象の1次元整数配列
    * @returns {Generator<{operation: string, indices: number[]}, void, undefined>} ソートの各ステップを表すオブジェクトを生成するジェネレーター
    */
-  static *sort(array) {
+  *sort(array) {
     const n = array.length;
 
     for (let i = 1; i < n; i++) {
