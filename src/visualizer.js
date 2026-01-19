@@ -73,7 +73,10 @@ async function startSorting() {
   for (const { operation, indices } of generator) {
     renderBars(indices, operation === "compare" ? "comparing" : "swapping");
     await new Promise((resolve) =>
-      setTimeout(resolve, parseInt(speedInput.value)),
+      setTimeout(
+        resolve,
+        parseInt(speedInput.max) - parseInt(speedInput.value) + 1,
+      ),
     );
   }
 
