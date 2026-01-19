@@ -1,7 +1,7 @@
 {
   "name": "se04project-std6-team-sts",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write ."
