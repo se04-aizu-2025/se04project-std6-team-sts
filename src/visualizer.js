@@ -1,5 +1,7 @@
 import { InsertionSort } from "./InsertionSort.js";
 import { SelectionSort } from "./SelectionSort.js";
+import { HeapSort } from "./HeapSort.js";
+import { QuickSort } from "./QuickSort.js";
 import { generateRandomArray } from "./data-generator.js";
 
 // DOM要素の取得
@@ -57,6 +59,12 @@ async function startSorting() {
       break;
     case "selection":
       sorter = new SelectionSort();
+      break;
+    case "heap":
+      sorter = new HeapSort();
+      break;
+    case "quick":
+      sorter = new QuickSort();
       break;
   }
   const generator = sorter.sort(array);
